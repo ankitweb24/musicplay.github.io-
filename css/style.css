@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    user-select: none;
+}
+
+.main_div {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(122, 14, 126);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.main_div::before{
+    position: absolute;
+    content: 'excellent code with aj';
+    color: rgb(0, 0, 0);
+    top:2%;
+    text-transform: capitalize;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 90px;
+    box-shadow: 0 0 4px rgb(0,0,0,.2);
+    border-radius: 40px;
+}
+
+.box{
+    z-index: 99;
+    width: 40%;
+    height: 80%;
+    background-color:rgb(255, 255, 255);
+    box-shadow:  0 0 5px rgba(15, 15, 15, 0.205);
+    border-radius: 10px;
+    transition-duration: 300ms;
+    position: relative;
+    padding: 10px;
+}
+.dark_mode{
+    background-color: rgba(0, 0, 0, 0.781);
+    color: #fff;
+}
+.box .box-header{
+    width: 100%;
+    height: 15%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: rgba(0, 0, 0, 0.712);
+}
+.dark_mode .box-header{
+    color: rgb(255, 255, 255);
+}
+.box-header i{
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.418);
+    font-size: 2rem;
+    opacity: .9;
+}
+
+.dark_mode .box-header i{
+    color: rgb(216, 208, 208);
+}
+.box-header i:hover{
+    color: rgb(0, 0, 0);
+}
+
+.box-header h3{
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.box .box-body{
+    width: 100%;
+    height: 60%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+.box-body img{
+    width:38%;
+    height: 60%;
+    position: absolute;
+    top: 2px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.178);
+}
+.dark_mode .box-body img{
+    border: 1px solid rgba(243, 243, 243, 0.514);
+}
+.box-body p{
+    color: rgb(0, 0, 0);
+    /* bottom: 0; */
+    z-index: 99;
+    position: relative;
+    top: 30%;
+    margin: 5px 0;
+    text-transform: capitalize;
+}
+.dark_mode .box-body p{
+    color: #fff;
+}
+.box-body .title{
+    font-size: 2rem;
+}
+.box-body .artist{
+    font-size: 1rem;
+}
+.box-footer{
+    width: 100%;
+    height: 25%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.box-footer .process_music{
+    width: 100%;
+    height: 25%;
+    /* background-color: yellow; */
+    color: rgb(7, 2, 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 0 1px rgb(0,0,0,.4); */
+    position: relative;
+}
+.process_music .pro_main{
+    width: 80%;
+    height: 20%;
+    margin-top: 20px;
+    background-color: rgba(233, 233, 233, 0.342);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+} .progress{
+    width: 0%;
+    height: 2px;
+    background-color: red;
+    cursor: pointer;
+    position: absolute;
+    transition-duration: 200ms;
+    place-items: center;
+    display: grid;
+}
+.dark_mode .progress{
+    background-color: #fff;
+}
+.progress::before{
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: red;
+    right: 0;
+    border-radius: 50%;
+}
+.dark_mode .progress::before{
+    background-color: #fff;
+}
+
+.process_music .currentTIme{
+    margin-bottom: 10px;
+    margin-left: 3px;
+    position: absolute;
+    left: 0;
+}
+.process_music .duration{
+    margin-bottom: 10px;
+    margin-right: 3px;
+    position: absolute;
+    right: 0;
+}
+.box-footer .btn_ctrl{
+    width: 100%;
+    height: 75%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btn_ctrl .controls{
+    width: 100%;
+    height: 70%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.controls button{
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px rgba(54, 54, 54, 0.315);
+    transition-duration: 40ms;
+    place-items: center;
+    display: grid;
+}
+.controls button:nth-child(2){
+    width: 50px;
+    height: 50px; 
+    font-size: 1.6rem;
+    text-align: center;
+}
+.controls button:nth-child(2) i{
+    margin-left: 0px;
+    margin-top: 2px;
+}
+.controls button:nth-child(1) i{
+    margin-left: -1px;
+    margin-top: 2px;
+}
+.controls button:nth-child(3) i{
+    margin-left: 4px;
+    margin-top: 2px;
+}
+.controls button:active{
+    transform: scale(.9);
+    background-color: rgba(255, 255, 255, 0.657);
+}
+.btn_ctrl .fev_music{
+    width: 100%;
+    height: 30%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.dark_mode .btn_ctrl .fev_music button i{
+    color: #fff;
+}
+.fev_music button{
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: rgba(10, 1, 1, 0.534);
+}
+.fev-set{
+    color: red!important;
+    background-color: red;
+}
+.music_list{
+    width: 0%;
+    height: 80%;
+   background-color: rgba(214, 78, 255, 0.959);
+    position: absolute;
+    z-index: 998;
+    top: 0;
+    transition-duration: 300ms;
+    margin: 10px 0;
+    border-radius: 4px;
+    place-items: center;
+    display: grid;
+    overflow: hidden;
+}
+.fa-list{
+    z-index: 999;
+}
+
+.music_list .list_unorder{
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    position: relative;
+}
+
+.list_unorder .list_pack{
+    width: 90%;
+    height: 10%;
+    position: relative;top: 60px;
+    /* background-color: red; */
+    text-align: center;
+    margin: 5px 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    text-transform: capitalize;
+    box-shadow: 0 0 2px rgb(185, 193, 236);
+    transition-duration: 300ms;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.list_unorder .list_pack:hover{
+    background-color: rgba(9, 19, 77, 0.753);
+}
+.list_pack i{
+    position: absolute;
+    left: -1px;
+    /* margin-left: -10px; */
+}
+.music_list_active{
+    width: 70%!important;
+}
+.fa-cog{
+    z-index: 999;
+}
+.settings_code{
+    width: 50%;
+    height: 0%;
+    /* background-color: rgb(255, 95, 21); */
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    top: 0;
+    margin-top: 10px;
+    border-radius:4px;
+    transition-duration: 300ms;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: inset 0 0 4px rgb(0,0,0,.2);
+    background-color: #fff;
+}
+.dark_mode .settings_code{
+    background-color: rgb(3, 3, 14);
+}
+.settings_code::before{
+    content: 'darkmode';
+    position: absolute;
+    color: rgb(0,0,0,.3);
+    top: 12%;
+    left: 2%;
+    text-transform: capitalize;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.dark_mode .settings_code::before{
+    color: #fff;
+}
+.settings_activated{
+    height: 50%!important;
+}
+
+.settings_code input[type="checkbox"]{
+    width: 70px;
+    height: 36px;
+    background-color: rgb(255, 255, 255);
+    -webkit-appearance: none;
+    position: absolute;
+    border-radius: 40px;
+    cursor: pointer;
+    border: none;
+    top: 20%;
+    left: 2%;
+    box-shadow: 0 0 2px rgb(0,0,0,.2);
+    outline: none;
+}
+.settings_code input[type="checkbox"]::before{
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: rgb(0, 119, 255);
+    box-shadow: 0 0 10px rgb(185, 193, 236);
+    border-radius: 50%;
+    margin-top: 3px;
+    margin-left: 2px;
+    left: 0;
+    transition-duration: 300ms;
+}
+.settings_code input[type="checkbox"]:checked::before{
+    left: 50%;
+    background-color: rgb(56, 60, 119);
+}
+.vol{
+   position: absolute;
+   right: 5%;
+   bottom: 5%; 
+   width: 30px;
+   height: 30px;
+   cursor: pointer;
+   font-size: 1.1rem;
+   border-radius: 50%;
+   background-color: #fff;
+   box-shadow: 0 0 3px rgb(0,0,0,.2);
+   border: none;
+   outline: none;
+}
+.vol_set{
+    margin-top: 10px;
+    width: 20%;
+    height: 0%;
+    /* background-color: red; */
+    position: absolute;
+    right: 0%;
+    transition-duration: 300ms;
+    bottom: 28%;
+    /* border: 1px solid rgb(0,0,0,.2); */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vol_activated{
+    height: 60%;
+}
+
+.vol_set .set_range{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 10px;
+}
+.set_range input[type='range']{
+    transform: rotate(-90deg);
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    background-color: rgb(65, 6, 47);
+    height: 1px;
+    width:160px;
+    border: none;
+    outline: none;
+}
+.dark_mode .set_range input[type="range"]{
+    background-color: #fff;
+}
+.set_range input[type='range']::-webkit-slider-thumb{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(20, 1, 22);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dark_mode .set_range input[type='range']::-webkit-slider-thumb{
+    background-color: rgb(231, 231, 231);
+}
+#res{
+    position: absolute;
+    right: -6px;
+    top: 0px;
+    text-align: center;
+    /* background-color: red; */
+    width: 60px;
+    height: 20px;
+    font-weight: bold;
+}
+.settings_code button{
+    width: 80%;
+    height: 12%;
+    margin: 4px 0;
+    position: relative;
+    top: 45px;
+    border-radius: 40px;
+    border: none;
+    text-transform: capitalize;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serifs;
+    outline: none;
+    background-color: rgb(185, 193, 236);
+    cursor: pointer;
+}
+.settings_code button:hover{
+    background-color: rgb(56, 60, 119);
+    color: #fff;
+}
+@media(max-width:768px){
+    .box{
+        width: 90%;
+    }
+    #res{
+        right: -20px;
+    }
+}

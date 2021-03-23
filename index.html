@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="main_div">
+            
+        <div class="box">
+            <div class="music_list">
+                <ul class="list_unorder"></ul>
+            </div>
+            <div class="settings_code">
+                <button>account</button>
+                <button>set eq</button>
+                <button>theme</button>
+                <button>more settings</button>
+            </div>
+            <div class="box-header">
+                <i class="fa fa-list" title="playlist"></i>
+                <h3>music player</h3>
+                <i class="fa fa-cog" title="settings"></i>
+            </div>
+            <div class="box-body">
+                <img src="images/ms (1).png" id="img_room" alt="">
+                <p class="title">9 age</p>
+                <p class="artist">jass manak</p>
+                <div class="vol_set"></div>
+                <button class="vol" title="volume"><i class="fa fa-volume-up"></i></button>
+            </div>
+            <div class="box-footer">
+                <div class="process_music">
+                    <span class="currentTIme">00:00</span>
+                    <div class="pro_main">
+                        <span class="progress"></span>
+                    </div>
+                    <span class="duration">00:00</span>
+                </div>
+                <div class="btn_ctrl">
+                    <div class="controls">
+                        <button class="prev" title ="prev"><i class="fa fa-backward"></i></button>
+                        <button class="play" title="play / pause"><i class="fa fa-play"></i></button>
+                        <button class="next" title="next"><i class="fa fa-forward"></i></button>
+                    </div>
+                    <div class="fev_music">
+                        <button title="loop" class="replay"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+                        <button title="add to fev" class="fev"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <audio src="music/ms (1).mp3" id="music"></audio>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
